@@ -8,18 +8,23 @@
         <!--Poppins font link -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- fontawesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- favicon image -->
+        <link rel="shortcut icon"
+            href="./png-transparent-computer-icons-computer-programming-web-development-content-management-system-coding-miscellaneous-angle-text-thumbnail-removebg-preview.png"
+            type="image/x-icon">
         <!-- title -->
         <title>Portfolio</title>
     </head>
     <body>
         <div class="nav">
-            <!-- <input type="checkbox" id="check">
-                <label for="check" class="checkbox">
-                    <i class="fas fa-bars"></i>
-                </label> -->
             <ul>
                 <img src="./logo 1.png" alt class="ul__foto">
                 <li><a href="#head">Home</a></li>
@@ -27,6 +32,14 @@
                 <li><a href="#sec">Tech Stack</a></li>
                 <li><a href="#main">Projects</a></li>
                 <li><a href="#foter ">Contact</a></li>
+                <div>
+                    <input type="checkbox" class="checkbox" id="toggleBtn" />
+                    <label class="switch" for="toggleBtn">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
                 <div class="nav__image">
                     <img src="./Vectornavbar-git-ub.png" alt>
                     <img src="./ant-design_twitter-circle-filled.png" alt>
@@ -35,6 +48,19 @@
             </ul>
         </div>
         <header id="head">
+            <!-- <div class="slider">
+                <div class="slider_img">
+                    <img src="./stock-vector-web-development-coding-and-programming-responsive-layout-internet-site-or-app-of-devices-creation-1449924503.jpg" class="active" alt="jpg">
+                    <img src="./Future-of-Web-Development-2022.jpg" alt="jpg">
+                    <img src="./360_F_308823955_XTMT8TNKmOYnPEwmEmfnskgNqQv3hQE5.jpg" alt="jpg">
+                    <img src="./1000_F_294370899_CjLy3nMMSkm9FBsIdPvqlQgjiGrTT9kW.jpg" alt="jpg">
+                    <img src="./frontend-web-development.jpg" alt="jpg">
+                </div>
+                <div class="slider_btn">
+                    <button class="btn btn-prev">prev</button>
+                    <button class="btn btn-next">next</button>
+                </div>
+            </div> -->
             <div class="heading">
                 <p>Hi 👋, <br> My name is <br>
                     <span>Amirxon</span> <br> I build things for web</p>
@@ -60,57 +86,76 @@
             <p class="main__txt">Things I’ve built so far</p>
             <div class="main__card">
                 <div class="card">
-                    <img src="./Screenshot 2023-09-19 175606.png" alt class="card__foto">
+                    <img src="./Screenshot 2023-09-19 175606.png" alt
+                        class="card__foto">
                     <h4>Shipping service</h4>
-                    <p>On this site, you have the possibility <br> of safe delivery throughout Uzbekistan. <br> It's all for you. Different types of <br> cars with all kinds of conveniences.Then you register.</p>
+                    <p>On this site, you have the possibility <br> of safe
+                        delivery throughout Uzbekistan. <br> It's all for you.
+                        Different types of <br> cars with all kinds of
+                        conveniences.Then you register.</p>
                     <h6>Tech stack :<span> HTML , JavaScript, SASS, React</span></h6>
                     <div class="main__cards">
                         <div>
                             <img src="./akar-icons_link-chain.png" alt>
-                            <a href="https://yuk-tawiw-uzb.vercel.app/">Live Preview</a>
+                            <a href="https://yuk-tawiw-uzb.vercel.app/">Live
+                                Preview</a>
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://github.com/Gituberon/yuk-tawiw.git">View Code</a>
+                            <a href="https://github.com/Gituberon/yuk-tawiw.git">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./Screenshot 2023-09-17 083959.png" alt class="card__foto">
+                    <img src="./Screenshot 2023-09-17 083959.png" alt
+                        class="card__foto">
                     <h4>Xbox Portfolio</h4>
-                    <p>This is my second portfolio, it's about more games, you have the service <br> to download, buy and find the game <br> you want. New games <br> on Xbox platform.</p>
+                    <p>This is my second portfolio, it's about more games, you
+                        have the service <br> to download, buy and find the game
+                        <br> you want. New games <br> on Xbox platform.</p>
                     <h6>Tech stack :<span> HTML , JavaScript, SASS, React</span></h6>
                     <div class="main__cards">
                         <div>
                             <img src="./akar-icons_link-chain.png" alt>
-                            <a href="https://github.com/Gituberon/xboxportfolio.git">Live Preview</a>
+                            <a
+                                href="https://github.com/Gituberon/xboxportfolio.git">Live
+                                Preview</a>
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://xboxamirportfolio.vercel.app/">View Code</a>
+                            <a href="https://xboxamirportfolio.vercel.app/">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./Screenshot 2023-09-17 090526.png" alt class="card__foto">
+                    <img src="./Screenshot 2023-09-17 090526.png" alt
+                        class="card__foto">
                     <h4>StartUp</h4>
-                    <p>StartUp site is a site about various <br> businesses that we understand. We can work on any business project on it. We <br> want to present this site to many <br> places.</p>
+                    <p>StartUp site is a site about various <br> businesses that
+                        we understand. We can work on any business project on
+                        it. We <br> want to present this site to many <br>
+                        places.</p>
                     <h6>Tech stack :<span> HTML , JavaScript, SASS, React</span></h6>
                     <div class="main__cards">
                         <div>
                             <img src="./akar-icons_link-chain.png" alt>
-                            <a href="https://start-up-777.vercel.app/">Live Preview</a>
+                            <a href="https://start-up-777.vercel.app/">Live
+                                Preview</a>
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://github.com/Gituberon/StartUp.git">View Code</a>
+                            <a href="https://github.com/Gituberon/StartUp.git">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="main--card">
                 <div class="card">
-                    <img src="./Screenshot 2023-09-17 090724.png" alt  class="card__foto">
+                    <img src="./Screenshot 2023-09-17 090724.png" alt
+                        class="card__foto">
                     <h4>Velocity</h4>
                     <p>This is sample project description <br> random things are
                         here in <br> description This is sample project <br>
@@ -123,12 +168,14 @@
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://github.com/Gituberon/velosity.git">View Code</a>
+                            <a href="https://github.com/Gituberon/velosity.git">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./Screenshot 2023-09-19 182130.png" alt class="card__foto">
+                    <img src="./Screenshot 2023-09-19 182130.png" alt
+                        class="card__foto">
                     <h4>Chairs</h4>
                     <p>This is sample project description <br> random things are
                         here in <br> description This is sample project <br>
@@ -137,29 +184,35 @@
                     <div class="main__cards">
                         <div>
                             <img src="./akar-icons_link-chain.png" alt>
-                            <a href="https://chairs-site.vercel.app/">Live Preview</a>
+                            <a href="https://chairs-site.vercel.app/">Live
+                                Preview</a>
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://github.com/Gituberon/chairs.git">View Code</a>
+                            <a href="https://github.com/Gituberon/chairs.git">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./Screenshot 2023-09-19 182454.png" alt class="card__foto">
+                    <img src="./Screenshot 2023-09-19 182454.png" alt
+                        class="card__foto">
                     <h4>Portfolio-2</h4>
                     <p>This is sample project description <br> random things are
                         here in <br> description This is sample project <br>
                         lorem ipsum generator for dummy <br> content</p>
-                        <h6>Tech stack :<span> HTML , JavaScript, SASS, React</span></h6>
+                    <h6>Tech stack :<span> HTML , JavaScript, SASS, React</span></h6>
                     <div class="main__cards">
                         <div>
                             <img src="./akar-icons_link-chain.png" alt>
-                            <a href="https://amirportfolio2.vercel.app/">Live Preview</a>
+                            <a href="https://amirportfolio2.vercel.app/">Live
+                                Preview</a>
                         </div>
                         <div>
                             <img src="./akar-icons_github-fill.png" alt>
-                            <a href="https://github.com/Gituberon/amirportfolio.git">View Code</a>
+                            <a
+                                href="https://github.com/Gituberon/amirportfolio.git">View
+                                Code</a>
                         </div>
                     </div>
                 </div>
@@ -189,5 +242,6 @@
                     & <span>Coffee</span></p>
             </div>
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>
