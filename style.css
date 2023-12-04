@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: white;
+    background-color: rgb(23, 23, 30);
     font-family: 'Poppins', sans-serif;
 }
 :root {
@@ -17,7 +17,7 @@ body{
     --primary-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: rgb(23, 23, 30);
     --header-height: 3rem;
   }
   /*========== Variables Dark theme ==========*/
@@ -73,63 +73,69 @@ header{
     display: grid;
     grid-template-columns: auto auto;
     gap: 100px;
-    margin-top: 200px;
+    margin-top: 10px;
 }
 img{
     max-width: 100%;
     height: auto;
 }
-.slider{
-    max-width: 1140px;
-    margin: auto;
-    margin-top: 80px;
+
+
+.head__slider {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.slider {
+    width: 100%;
+    max-width: 90%;
     height: 500px;
-    /* border: 2px solid red;  border bilan misol */
     position: relative;
+    overflow: hidden;
+    border-radius: 15px;
 }
-.slider .slider_img{
-    height: 100%;
-}
-.slider .slider_img img{
-    opacity: 0;
-    transition: 2s;
+
+  .slide {
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
     position: absolute;
-    top: 0;
-    left: 0;
+    transition: all 3s;
+  }
+  
+  .slide img {
     width: 100%;
     height: 100%;
-}
-.slider .slider_img img.active{
-    opacity: 1;
-}
-.slider .slider_btn{
+    object-fit: cover;
+  }
+  
+  .btn {
     position: absolute;
-    left: 0;
-    bottom: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    opacity: 0.5;
-    transition: all 1s;
-}
-.slider .slider_btn .btn{
     width: 60px;
-    height: 40px;
+    height: 60px;
+    padding: 10px;
     border: none;
-    border: 2px solid transparent;
-    margin: 0 5px;
+    border-radius: 50%;
+    z-index: 10px;
     cursor: pointer;
-    transition: border 1s;
-    text-transform: uppercase;
-    background: white;
-    
-}
-.slider .slider_btn .btn:hover{
-    border: 3px solid gray;
-}
-.slider .slider_btn:hover{
-    opacity: 1;
-}
+    background-color: #c13e3e;
+    color: #fff;
+    font-size: 28px;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
 .heading p{
     color: #D9D9D9;
     font-size: 58px;

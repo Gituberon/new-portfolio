@@ -1,63 +1,28 @@
-// let prev = document.querySelector('.btn-prev');
-// let next = document.querySelector('.btn-next');
-// let img = document.querySelectorAll('.slider_img img');
-// let i = 0;
+const slides = document.querySelectorAll(".slide");
 
-// next.addEventListener('click', function (){
-//     img[i].style.display = 'none';
-//     i++;
-//     img[i].style.display = 'block';
-//     console.log(i);
-//     if (i > img.length) {
-//         img[i] = 0;
-//     }
-// });
-// setInterval(function () {
-//     img[i].style.display = 'none';
-//     i++;
-//     if (i >= img.length) {
-//         i = 0;
-//     }
-//     img[i].style.display = 'block';
-//     console.log(i);
-// }, 2000);
-// next.addEventListener('click', function (){
-//     img[i].classList.remove('active');
-//     i++;
-//     if (i >= img.length) {
-//         i = 0;
-//     }
-//     img[i].classList.add('active');
-//     console.log(i);
-// });
-// CSS class name for dark theme
-const darkTheme = "dark-theme";
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
 
-const darkThemeSetUp = () => {
-  if (getCurrentTheme() === "dark") {
-    document.getElementById("toggleBtn").checked = true;
-    document.getElementById("mode-text").textContent = "Dark Mode";
+const nextSlide = document.querySelector(".btn-next");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
   } else {
-    document.getElementById("toggleBtn").checked = false;
-    document.getElementById("mode-text").textContent = "Light Mode";
+    curSlide++;
   }
-};
 
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-
-//   Get user's theme preference from local storage
-const selectedTheme = localStorage.getItem("selected-theme");
-if (selectedTheme === "dark") {
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  darkThemeSetUp();
-}
-
-const themeButton = document.getElementById("toggleBtn");
-themeButton.addEventListener("change", () => {
-  document.body.classList.toggle(darkTheme);
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  darkThemeSetUp();
+//   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
 });
