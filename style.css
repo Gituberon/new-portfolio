@@ -7,37 +7,6 @@ body{
     background-color: rgb(23, 23, 30);
     font-family: 'Poppins', sans-serif;
 }
-:root {
-    /*========== Colors ==========*/
-    /* Change favorite color */
-    --hue-color: 230;
-    /* HSL color mode */
-    --primary-color: hsl(var(--hue-color), 69%, 61%);
-    --primary-color-second: hsl(var(--hue-color), 69%, 61%);
-    --primary-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --body-color: rgb(23, 23, 30);
-    --header-height: 3rem;
-  }
-  /*========== Variables Dark theme ==========*/
-  body.dark-theme {
-    /* HSL color mode */
-    --primary-color-second: hsl(var(--hue-color), 30%, 8%);
-    --text-color: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    margin: 0 0 var(--header-height) 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.94rem;
-    background-color: var(--body-color);
-    color: var(--text-color);
-  }  
 .nav ul{
     width: 100%;        
     background-color: rgba(25, 25, 25, 1);
@@ -472,11 +441,9 @@ footer{
         text-align: center;
     }
 }
-  /*==================== Dark Light Button Implementation ====================*/
   .checkbox {
     display: none;
   }
-  
   .switch {
     background-color: #111;
     border-radius: 50px;
@@ -491,7 +458,6 @@ footer{
     /* Scale the size to your need */
     transform: scale(0.7);
   }
-  
   .switch .ball {
     background-color: rgb(120, 120, 178);
     border-radius: 50%;
@@ -503,16 +469,82 @@ footer{
     transform: translateX(0px);
     transition: transform 0.2s linear;
   }
-  
   .checkbox:checked + .switch .ball {
     transform: translateX(24px);
   }
-  
   .fa-moon {
     color: #f1c40f;
   }
-  
   .fa-sun {
     color: #f39c12;
   }
-  
+body {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    line-height: 1.4;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+}
+.light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-top: 10px;
+}
+.light-mode-button:focus {
+    outline: none;
+}
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+body {
+    background-color: #3a3939;
+    transition: background-color 0.3s;
+}
+body[light-mode="dark"] {
+    background-color: rgb(10, 10, 11);
+    color: #ced4e2;
+}
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #ced4e2;
+    color: rgb(10, 10, 11);
+}
+body[light-mode="dark"] .light-mode-button span:nth-child(2) {
+    left: 65px;
+    background-color: rgb(10, 10, 11);
+}
+body[light-mode="dark"] a {
+    color: #CCC;
+}
